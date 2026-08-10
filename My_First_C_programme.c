@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 int main() {
+
+    printf("Hello World!\n");
+
     int a,b;
     printf("enter the value of a: ");
     scanf("%d",&a);
