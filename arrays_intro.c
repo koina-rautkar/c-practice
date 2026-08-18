@@ -1,26 +1,30 @@
 #include <stdio.h>
 int main(){
     int i,n;
-    printf("enter the no of numbers you want: \n");
+    int l;
+    printf("enter the number of enteries: \n");
     scanf("%d",&n);
     int arr[n];
-    for ( i = 0; i <=(n-1   ); i++)
-    {
-        printf("enter your number:\n");
-        scanf("%d",&arr[i]);
+    for(i=0;i<n;i++){
+        printf("enter your number: ");
+        scanf("%d", &arr[i]);
     }
-    printf("your array is:\n");
-    for ( i = 0; i <n; i++)
-    {
+    //printing the array
+    for(i=0;i<n;i++){
         printf("%d",arr[i]);
-        if (i<(n-1)){
-            printf(",");
-        }
-        
-        
+        if(i<(n-1)){
+                printf(",");
+            }
     }
-    
-    
+    printf("\n");
+    //finding the largest number
+    l = arr[0];
+    for(i=0;i<n;i++) {
+        if(arr[i]>l){
+            l = arr[i];
+        }
+    }
+    printf("The largest number is: %d",l);
+
     return 0;
-    
 }
