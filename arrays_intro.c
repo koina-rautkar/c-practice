@@ -24,7 +24,19 @@ int main(){
             l = arr[i];
         }
     }
-    printf("The largest number is: %d",l);
+    printf("The largest number is: %d\n",l);
+
+    //Sum and Average of an array
+    int sum=0;
+    float avg;
+    for ( i = 0; i <n; i++)
+    {
+        sum= sum+ arr[i];
+    }
+    printf("Sum is: %d \n",sum);
+
+    avg= (float)sum/n ;
+    printf("Average is: %.2f",avg);
 
     return 0;
 }
