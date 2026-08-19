@@ -51,7 +51,7 @@ int main(){
     avg= (float)sum/n ;
     printf("Average is: %.2f \n",avg);
 
-    //reversing the array
+    //reversing the array.
     int r;
     printf("reversed array is: \n");
     for ( i = n-1; i>=0; i--)
@@ -61,9 +61,8 @@ int main(){
         if (i !=0)
         {
             printf(",");
-        }
-        
+        }   
     }
-    
+
     return 0;
 }
