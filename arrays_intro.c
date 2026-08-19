@@ -26,6 +26,19 @@ int main(){
     }
     printf("The largest number is: %d\n",l);
 
+    //finding the smallest number
+    int s;
+    s= arr[0];
+    for ( i = 0; i < n; i++)
+    {
+        if ( arr[i]<s)
+        {
+            s= arr[i];
+        }
+        
+    }
+    printf("smallest number is: %d\n",s);
+
     //Sum and Average of an array
     int sum=0;
     float avg;
@@ -36,7 +49,21 @@ int main(){
     printf("Sum is: %d \n",sum);
 
     avg= (float)sum/n ;
-    printf("Average is: %.2f",avg);
+    printf("Average is: %.2f \n",avg);
 
+    //reversing the array
+    int r;
+    printf("reversed array is: \n");
+    for ( i = n-1; i>=0; i--)
+    {
+        r=arr[i];
+        printf("%d",r);
+        if (i !=0)
+        {
+            printf(",");
+        }
+        
+    }
+    
     return 0;
 }
