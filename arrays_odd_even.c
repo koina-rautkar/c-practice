@@ -4,7 +4,6 @@ int main(){
     printf("Enter the number of entries: \n");
     scanf("%d",&n);
     int arr[n];
-
     for ( i = 0; i < n; i++)
     {
         printf("enter your number:");
