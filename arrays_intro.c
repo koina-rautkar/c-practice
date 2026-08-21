@@ -1,7 +1,64 @@
 #include <stdio.h>
+
+// making a function to pull largest number from an array
+
+    int FindLargest( int arr[],int n){
+         int l= arr[0];
+        for ( int i = 0; i < n; i++)
+        {
+            if (arr[i]>l)
+            {
+                l= arr[i];
+            }
+            
+        }
+        return l;
+    }
+// making a function to pull smallest number from an array
+    int FindSmallest(int arr[], int n){
+        int s= arr[0];
+        for (int i = 0; i < n; i++)
+        {
+            if (arr[i]<s)
+            {
+                s= arr[i];
+            }
+            
+        }
+        return s;
+    }
+// making a function to find sum of an array
+    int sum(int arr[],int n){
+        int a=0;
+        for (int i = 0; i < n; i++)
+        {
+            a= a + arr[i];
+        }
+        return a;
+    }
+// making a function to find average of an array
+    float avg(int arr[],int n){
+        float b;
+        b= (float)sum(arr,n)/n;
+        return b;
+    }
+// making a function to reverse an array
+    void reverse(int arr[], int n){
+        for (int i=n-1; i >= 0; i--)
+        {
+            printf("%d", arr[i]);
+            if (i != 0)
+            {
+                printf(",");
+            }
+            
+        }
+    }
+
+
+
 int main(){
     int i,n;
-    int l;
     printf("enter the number of enteries: \n");
     scanf("%d",&n);
     int arr[n];
@@ -17,52 +74,29 @@ int main(){
             }
     }
     printf("\n");
+
     //finding the largest number
-    l = arr[0];
-    for(i=0;i<n;i++) {
-        if(arr[i]>l){
-            l = arr[i];
-        }
-    }
+    int l;
+    l= FindLargest(arr,n);
     printf("The largest number is: %d\n",l);
 
     //finding the smallest number
     int s;
-    s= arr[0];
-    for ( i = 0; i < n; i++)
-    {
-        if ( arr[i]<s)
-        {
-            s= arr[i];
-        }
-        
-    }
+    s = FindSmallest(arr,n);
     printf("smallest number is: %d\n",s);
 
     //Sum and Average of an array
-    int sum=0;
-    float avg;
-    for ( i = 0; i <n; i++)
-    {
-        sum= sum+ arr[i];
-    }
-    printf("Sum is: %d \n",sum);
+    int a;
+    float av;
+    a = sum(arr,n);
+    printf("Sum is: %d \n",a);
 
-    avg= (float)sum/n ;
-    printf("Average is: %.2f \n",avg);
+    av= avg(arr,n);
+    printf("Average is: %.2f \n",av);
 
     //reversing the array.
-    int r;
     printf("reversed array is: \n");
-    for ( i = n-1; i>=0; i--)
-    {
-        r=arr[i];
-        printf("%d",r);
-        if (i !=0)
-        {
-            printf(",");
-        }   
-    }
-
+    reverse(arr,n);
+    
     return 0;
 }
