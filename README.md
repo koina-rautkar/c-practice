@@ -15,6 +15,7 @@ My Day by Day practice repo while learning C.
  `number_pattern.c` - Number pyramid pattern 
  `arrays_intro.c` - Array basics: input, output, largest, smallest, sum, average, reverse 
  `arrays_odd_even.c` - Splitting an array into even and odd numbers 
+ `search_array.c` - search array using found flag
 
 ## Notes:
 Each file was built incrementally, with fixing my errors and bugs along the way and learning new everyday, not just copy pasting. Still learning!
