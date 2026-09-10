@@ -13,6 +13,19 @@ int search(int arr[], int n,int a){
     return -1;   // never found — reached the end of the loop
 }
 
+int countOcurrences(int arr[], int n , int a){
+    int c = 0;
+    for ( int i = 0; i < n; i++)
+    {
+        if (arr[i]==a)
+        {
+            c++;
+        }
+        
+    }
+    return c;
+}
+
 int main(){
     int n,i;
     printf("Enter number of entries:");
@@ -37,6 +50,10 @@ int main(){
     else{
         printf("Found %d at index: %d\n",a,r);
     }
+
+    //number of times that entry appeared
+    printf("Number of times %d appeared:%d",a,countOcurrences(arr,n,a));
+
     return 0;
 
 }
