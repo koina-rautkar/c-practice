@@ -1,4 +1,18 @@
 #include<stdio.h>
+
+int search(int arr[], int n,int a){
+    int i;
+    for ( i = 0; i < n; i++)
+    {
+        if (arr[i]==a)
+        {
+            return i;// exit immediately, handing back the index
+        }
+        
+    }
+    return -1;   // never found — reached the end of the loop
+}
+
 int main(){
     int n,i;
     printf("Enter number of entries:");
@@ -13,23 +27,16 @@ int main(){
     //searching for a number
 
     int a;
-    int found = 0;
     printf("Enter what you want to search:");
     scanf("%d",&a);
-    for ( i = 0; i < n; i++)
+    int r = search(arr,n,a);
+    if (r==-1)
     {
-        if (arr[i]==a)
-        {
-            found=1;
-            printf("Found %d at %d index",a,i);
-            break;
-        }
+        printf("%d not found in array\n",a);
     }
-    if (found==0)
-        {
-            printf("%d not found in the array.\n",a);
-        }
-
+    else{
+        printf("Found %d at index %d\n",a,r);
+    }
     return 0;
 
 }
