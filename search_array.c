@@ -35,7 +35,7 @@ int main(){
         printf("%d not found in array\n",a);
     }
     else{
-        printf("Found %d at index %d\n",a,r);
+        printf("Found %d at index: %d\n",a,r);
     }
     return 0;
 
